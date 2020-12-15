@@ -254,12 +254,12 @@ class CFRBase:
             expl_total = sum(expl_p) / eval_tree.n_seats
             expl_totals.append(expl_total)
 
-            self._chief_handle.add_scalar(self._exps_avg_total[t_idx],
-                                          "Evaluation/" + METRIC, self._iter_counter, expl_total)
+            # self._chief_handle.add_scalar(self._exps_avg_total[t_idx],
+            #                               "Evaluation/" + METRIC, self._iter_counter, expl_total)
 
         expl_total_averaged = sum(expl_totals) / float(len(expl_totals))
-        self._chief_handle.add_scalar(self._exp_all_averaged_avg_total,
-                                      "Evaluation/expoitability" + METRIC, self._iter_counter, expl_total_averaged)
+        # self._chief_handle.add_scalar(self._exp_all_averaged_avg_total,
+        #                               "Evaluation/" + METRIC, self._iter_counter, expl_total_averaged)
 
     def _reset_player(self, p_id):
         def __reset(_node, _p_id):
