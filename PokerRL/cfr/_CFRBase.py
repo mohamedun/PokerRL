@@ -129,8 +129,8 @@ class CFRBase:
 
         self._iter_counter += 1
 
-        self._compute_cfv()
-        self._log_curr_strat_expl()
+        self._compute_cfv() #MO: why compute it again ?
+        self._log_curr_strat_expl() #MO: logs current exploitability of the strategy
         self._evaluate_avg_strats()
 
     def _compute_cfv(self):
