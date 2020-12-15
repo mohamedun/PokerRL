@@ -8,13 +8,13 @@ It will store logs and tree files on your C: drive.
 
 from PokerRL.cfr.CFRPlus import CFRPlus
 from PokerRL.game import bet_sets
-from PokerRL.game.games import DiscretizedNLLeduc
+from PokerRL.game.games import *
 from PokerRL.rl.base_cls.workers.ChiefBase import ChiefBase
 
 if __name__ == '__main__':
     from PokerRL._.CrayonWrapper import CrayonWrapper
 
-    n_iterations = input()
+    n_iterations = int(input())
     name = "MoCFRp_StdLeduc"
 
     # Passing None for t_prof will is enough for ChiefBase. We only use it to log; This CFR impl is not distributed.
@@ -25,7 +25,7 @@ if __name__ == '__main__':
                            runs_distributed=False,
                            runs_cluster=False)
     cfr = CFRPlus(name=name,
-                  game_cls=DiscretizedNLLeduc,
+                  game_cls=StandardLeduc,
                   delay=0,
                   agent_bet_set=bet_sets.POT_ONLY,
                   chief_handle=chief)
