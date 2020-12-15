@@ -14,8 +14,8 @@ from PokerRL.rl.base_cls.workers.ChiefBase import ChiefBase
 if __name__ == '__main__':
     from PokerRL._.CrayonWrapper import CrayonWrapper
 
-    n_iterations = 150
-    name = "CFRplus_EXAMPLE"
+    n_iterations = input()
+    name = "MoCFRp_StdLeduc"
 
     # Passing None for t_prof will is enough for ChiefBase. We only use it to log; This CFR impl is not distributed.
     chief = ChiefBase(t_prof=None)
