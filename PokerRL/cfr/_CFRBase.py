@@ -259,7 +259,7 @@ class CFRBase:
 
         expl_total_averaged = sum(expl_totals) / float(len(expl_totals))
         self._chief_handle.add_scalar(self._exp_all_averaged_avg_total,
-                                      "Evaluation/" + METRIC, self._iter_counter, expl_total_averaged)
+                                      "Evaluation/expoitability" + METRIC, self._iter_counter, expl_total_averaged)
 
     def _reset_player(self, p_id):
         def __reset(_node, _p_id):
