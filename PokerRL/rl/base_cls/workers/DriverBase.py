@@ -35,6 +35,7 @@ class DriverBase(WorkerBase):
             self._ray.init_local()
 
         file_util.do_pickle(obj=t_prof, file_name=t_prof.name, path=t_prof.path_trainingprofiles)
+        # ^ what is this ?
         self.n_iterations = n_iterations
 
         self._step_to_import = iteration_to_import

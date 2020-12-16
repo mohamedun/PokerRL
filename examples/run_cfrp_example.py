@@ -13,7 +13,7 @@ from PokerRL.rl.base_cls.workers.ChiefBase import ChiefBase
 
 if __name__ == '__main__':
     from PokerRL._.CrayonWrapper import CrayonWrapper
-
+    print("Enter number of iterations:")
     n_iterations = int(input())
     name = "MoCFRp_StdLeduc"
 
