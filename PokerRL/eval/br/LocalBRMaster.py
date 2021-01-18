@@ -39,7 +39,6 @@ class LocalBRMaster(EvaluatorMasterBase):
                   "are non-terminal.")
 
     def evaluate(self, iter_nr):
-        print('in evaluate')
         for mode in self._t_prof.eval_modes_of_algo:
 
             if self._is_multi_stack:
