@@ -18,8 +18,8 @@ class RLBRArgs:
                  # Training
                  DISTRIBUTED=False,
                  n_iterations=10000,
-                 play_n_games_per_iter=50,
-                 pretrain_n_games=5120,
+                 play_n_games_per_iter=50,  # per LA
+                 pretrain_n_games=5120,  # per LA
                  device_training="cpu",
 
                  # the DDQN
