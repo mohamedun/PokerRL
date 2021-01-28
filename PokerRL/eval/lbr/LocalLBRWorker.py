@@ -393,7 +393,8 @@ class _LBRRolloutManager:
 
         self._cards_dealt = np.array([c for c in self._board_1d if c != Poker.CARD_NOT_DEALT_TOKEN_1D])
         self._possible_cards = np.arange(self.env_bldr.rules.N_CARDS_IN_DECK, dtype=np.int32)
-        self._possible_cards = np.delete(self._possible_cards, np.concatenate((self._cards_dealt, self._lbr_hand_1d)))
+        x = np.concatenate((self._cards_dealt, self._lbr_hand_1d))
+        self._possible_cards = np.delete(self._possible_cards, x.astype(int))
 
         self._n_cards_to_deal = env_bldr.lut_holder.DICT_LUT_N_CARDS_OUT[self._env.ALL_ROUNDS_LIST[-1]] \
                                 - env_bldr.lut_holder.DICT_LUT_N_CARDS_OUT[self._env.current_round]
