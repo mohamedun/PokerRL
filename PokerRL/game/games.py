@@ -48,7 +48,7 @@ class StandardLeduc(LeducRules, LimitPokerEnv):
                                lut_holder=lut_holder,
                                is_evaluating=is_evaluating)
 
-
+# max raises 6,6
 class BigLeduc(BigLeducRules, LimitPokerEnv):
     RULES = BigLeducRules
     IS_FIXED_LIMIT_GAME = True
@@ -253,6 +253,11 @@ class Flop5Holdem(FlopHoldemRules, LimitPokerEnv):
     def _adjust_raise(self, raise_total_amount_in_chips):
         return self.get_fraction_of_pot_raise(fraction=1.0, player_that_bets=self.current_player)
 
+# """"""""""""""
+# Modified Holdem
+# """"""""""""""
+
+# max raises 3,2
 class ModFlop5Holdem(FlopHoldemRules, LimitPokerEnv):
     RULES = FlopHoldemRules
     IS_FIXED_LIMIT_GAME = True
@@ -287,6 +292,7 @@ class ModFlop5Holdem(FlopHoldemRules, LimitPokerEnv):
     def _adjust_raise(self, raise_total_amount_in_chips):
         return self.get_fraction_of_pot_raise(fraction=1.0, player_that_bets=self.current_player)
 
+# max raises 4,3,3,3
 class ModLimitHoldem(HoldemRules, LimitPokerEnv):
     """
     Fixed-Limit Texas Hold'em is a long-standing benchmark game that has been essentially solved by Bowling et al
