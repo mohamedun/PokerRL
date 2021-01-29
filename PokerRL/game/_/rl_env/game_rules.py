@@ -121,9 +121,9 @@ class BigLeducRules:
         """
         for general docs refer to PokerEnv
         """
-        hand_ranks = np.full(shape=(boards_1d.shape[0], LeducRules.RANGE_SIZE), fill_value=-1, dtype=np.int32)
+        hand_ranks = np.full(shape=(boards_1d.shape[0], BigLeducRules.RANGE_SIZE), fill_value=-1, dtype=np.int32)
         for board_idx in range(boards_1d.shape[0]):
-            for range_idx in range(LeducRules.RANGE_SIZE):
+            for range_idx in range(BigLeducRules.RANGE_SIZE):
                 hand_ranks[board_idx, range_idx] = self.get_hand_rank(
                     hand_2d=lut_holder.get_2d_hole_cards_from_range_idx(range_idx=range_idx),
                     board_2d=lut_holder.get_2d_cards(cards_1d=boards_1d[board_idx]))
